@@ -21,3 +21,19 @@ btnPopup.addEventListener('click', () => {
 iconClose.addEventListener('click', () => {
     wrapper.classList.remove('active-popup');
 })
+
+//Apply style to email label even if invalid
+
+document.addEventListener("DOMContentLoaded", function() {
+    var emailInput = document.getElementById("emailInput");
+
+    if (emailInput) {
+        emailInput.addEventListener("blur", function() {
+            if (emailInput.value) {
+                emailInput.id = "emailFieldWithValue";
+            } else {
+                emailInput.id = "emailInput";
+            }
+        });
+    }
+});
