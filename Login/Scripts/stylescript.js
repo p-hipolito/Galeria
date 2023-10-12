@@ -5,6 +5,8 @@ const loginLink = document.querySelector(".login-link");
 const registerLink = document.querySelector(".register-link");
 const btnPopup = document.querySelector(".btnLogin-popup");
 const iconClose = document.querySelector(".icon-close");
+const registerBtn = document.getElementById('register-btn');
+
 
 registerLink.addEventListener('click', () => {
     wrapper.classList.add('active');
@@ -37,3 +39,11 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+registerBtn.addEventListener('click', ()=> {
+    const user = document.getElementById('registerUser').value;
+    const mail = document.getElementById('registerEmail').value;
+    const password = document.getElementById('registerPassword').value;
+    criarUsuario(user, mail, password)
+});
+

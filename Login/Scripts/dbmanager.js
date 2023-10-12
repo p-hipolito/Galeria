@@ -35,8 +35,7 @@ const tbUsuarios = sequelize.define('tbUsuarios', {
     },
     id: {
         type: DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true
+        autoIncrement: true
       }
 }, {
     tableName: 'tbUsuarios'
@@ -51,15 +50,6 @@ console.log(tbUsuarios === sequelize.models.tbUsuarios);
     console.log("The table for the User model was just (re)created!");
   })();
 
-  const juia = tbUsuarios.create({
-    Usuario:'juia',
-    Email:'julia.dias1313@gmail.com',
-    Senha: 'amonene',
-});
-console.log(juia instanceof tbUsuarios); // true
-// console.log(jane); // Don't do this
-console.log(JSON.stringify(juia)); // This is good!
-//adicionando id à tabela
 /*tbUsuarios.init({
     id: {
       type: DataTypes.INTEGER,
@@ -80,3 +70,10 @@ console.log(user.id);
 */
 //alterando tabela para refletir mudanças feitas pelo modelo
 
+function criarUsuario(user, mail, password) {
+    const newUser = tbUsuarios.create({
+        Usuario: user,
+        Email: mail,
+        Senha: password
+    });
+};
