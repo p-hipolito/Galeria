@@ -32,7 +32,7 @@
                     <span class="icon">
                         <ion-icon name="mail"></ion-icon>
                     </span>
-                    <input type="email" class="input-field" id="emailInput" required>
+                    <input type="email" class="input-field email-input" id="emailInput" required>
                     <label class="input-label input-label-email" for="email">Email</label>
                     <span class="error" id="email-error"></span>
                 </div>
@@ -40,14 +40,14 @@
                     <span class="icon">
                         <ion-icon name="lock-closed"></ion-icon>
                     </span>
-                    <input type="password" required>
+                    <input type="text" id="passwordInput" required>
                     <label>Senha</label>
                 </div>
                 <div class="remember-forgot">
                     <label><input type="checkbox">Lembre-me</label>
                     <a href="#">Esqueceu sua senha?</a>
                 </div>
-                <button type="submit" class="btn">Login</button>
+                <button type="submit" class="btn" id="login-btn" onclick="login()">Login</button>
                 <div class="login-register">
                     <p>Não tem uma conta?<a href="#"
                     class='register-link'>  Registre-se</a></p>
@@ -78,7 +78,7 @@
                     <input type="password" id="registerPassword" required>
                     <label>Senha</label>
                 </div>
-                <button type="submit" class="btn" id="register-btn">Registrar</button>
+                <button type="button" class="btn" id="register-btn" onclick="createUser()">Registrar</button>
                 <div class="login-register">
                     <p>Já tem uma conta?<a href="#"
                     class='login-link'>  Login</a></p>
@@ -88,7 +88,9 @@
     </div>
 
     <script src="./Scripts/stylescript.js"></script>
-    <script src="./Scripts/dbmanager.js"></script>
+    <!-- <script src="./Scripts/dbmanager.js"></script> -->
+    <script src="./Scripts/API.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

@@ -44,6 +44,6 @@ registerBtn.addEventListener('click', ()=> {
     const user = document.getElementById('registerUser').value;
     const mail = document.getElementById('registerEmail').value;
     const password = document.getElementById('registerPassword').value;
-    criarUsuario(user, mail, password)
+    // criarUsuario(user, mail, password)
 });
 
