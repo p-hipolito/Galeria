@@ -28,25 +28,14 @@ iconClose.addEventListener('click', () => {
 })
 
 
-// Changing login password visibility to user
-function passwordDisplay( ) {
-    if(passwordInput.type ==='password') {
-        passwordInput.type = 'text';
-        lock.querySelector('ion-icon').setAttribute('name', 'lock-open');
+// Changing password visibility to user
+function passwordDisplay(x, y) {
+    if(x.type ==='password') {
+        x.type = 'text';
+        y.querySelector('ion-icon').setAttribute('name', 'lock-open');
     } else {
-        passwordInput.type ='password';
-        lock.querySelector('ion-icon').setAttribute('name', 'lock-closed');
-    };
-};
-
-// Changing register password visibility to user
-function registerPasswordDisplay( ) {
-    if(registerPassword.type ==='password') {
-        registerPassword.type = 'text';
-        reLock.querySelector('ion-icon').setAttribute('name', 'lock-open');
-    } else {
-        registerPassword.type ='password';
-        reLock.querySelector('ion-icon').setAttribute('name', 'lock-closed');
+        x.type ='password';
+        y.querySelector('ion-icon').setAttribute('name', 'lock-closed');
     };
 };
 
