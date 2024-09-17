@@ -263,3 +263,13 @@ header {
     top: 5px;
     margin-top: -10px; 
   }
+
+.passwordIcon:hover {    
+    /* border: 4px solid rgba(255, 255, 255, .5); */
+    margin: -4px;
+    background: rgba(255, 255, 255, .5);
+    padding: 4px;
+    color: #162938;
+    cursor: pointer;
+    border-radius: 50%;
+  }

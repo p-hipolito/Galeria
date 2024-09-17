@@ -36,11 +36,11 @@
                     <label class="input-label input-label-email" for="email">Email</label>
                     <span class="error" id="email-error"></span>
                 </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="lock-closed"></ion-icon>
+                <div class="input-box" id="passwordLogin">
+                    <span class="icon" id="lock">
+                        <ion-icon class="passwordIcon" name="lock-closed" onclick="passwordDisplay()"></ion-icon>
                     </span>
-                    <input type="text" id="passwordInput" required>
+                    <input type="password" id="passwordInput"  required>
                     <label>Senha</label>
                 </div>
                 <div class="remember-forgot">
@@ -72,8 +72,8 @@
                     <label>Email</label>
                 </div>
                 <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="lock-closed"></ion-icon>
+                    <span class="icon" id="reLock" >
+                        <ion-icon class="passwordIcon" name="lock-closed" onclick="registerPasswordDisplay()" ></ion-icon>
                     </span>
                     <input type="password" id="registerPassword" required>
                     <label>Senha</label>
